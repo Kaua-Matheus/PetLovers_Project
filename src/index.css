@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: (230, 230, 230);
+}
+
+div, p, a, aside, label, h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+
+}
+
+h1 {
+    font-size: 60px;
+    color: white;
+}
