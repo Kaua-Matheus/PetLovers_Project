@@ -1,3 +1,6 @@
+import React from 'react';
+import Button from './Button';
+
 export default function Product({Name, Description, Price, Image}){
 
     return (
@@ -8,7 +11,7 @@ export default function Product({Name, Description, Price, Image}){
                     <h1 class='text-lg font-bold text-justify'>{Name}</h1>
                     <p class='text-sm text-justify'>{Description}</p>
                     <p class='text-sm text-justify'>{Price}</p>
-                    <button class='btn btn-sm border-none shadow-black shadow-sm text-gray-800 bg-white hover:text-white hover:bg-green-800 px-4'>Comprar</button>
+                    <Button>Comprar</Button>
                 </div>
             </div>
         </div>

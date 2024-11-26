@@ -5,7 +5,8 @@ function Menu(){
 
     return (
         <div class="flex-none mx-0.5">
-                <button onClick={navigation} class="btn btn-square btn-sm border-none bg-white shadow-black shadow-sm text-gray-800 hover:text-white" id="menuButton">
+                <button onClick={navigation} class="ml-12 h-8 btn btn-sm border-none rounded shadow-sm text-gray-800 bg-white hover:text-white hover:bg-gray-800 px-4
+                    active:translate-y-0.5 active:shadow-none">
                     <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
