@@ -63,13 +63,21 @@ export default function Home() {
         </div>
 
         {/* Ofertas */}
-        <div>
+        <div className="mt-10">
           <h2>
             Ofertas Relâmpago
           </h2>
           
           <div>
-            
+          <Card
+            onClick={() => alert("Botão Clicado!")}
+            type="product_card"
+            image={dogs}
+            description={"Cachorro"}
+            className="w-[250px] h-[300px] flex flex-col items-center justify-center bg-white shadow-md"
+            >
+              <p className="text-black">Cartão</p>
+            </Card>
           </div>
         </div>
 
