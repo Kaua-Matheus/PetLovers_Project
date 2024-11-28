@@ -34,9 +34,9 @@ export default function Card({
       };
 
   return (
-      <div className="card bg-gray-950 image-full w-[40rem] h-[20rem] shadow-xl mx-0.5 my-10 p-2">
+      <div className="card bg-darkText image-full w-[40rem] h-[20rem] shadow-xl mx-0.5 my-10 p-2 rounded">
 
-        <div className="p-3 bg-gray-800 rounded-sm shadow-sm">
+        <div className="p-3 bg-lightGray shadow-sm">
         <img src={image} alt={description} className="object-cover w-[38rem] h-[15rem]"/>
         </div>
 

@@ -11,6 +11,7 @@ import dogs from "../assets/dogs.jpeg";
 import furao from "../assets/furao.jpg";
 
 
+
 export default function Home() {
   return (
     
@@ -37,16 +38,40 @@ export default function Home() {
 
 
         {/* Carrossel */}
+        <div className="mt-10">
+          <div className='flex columns-2 align-top'>
+            <h1 className="text-black">Confira os nossos melhores serviços e promoções</h1>
 
-        <h1 className="text-black">Confira os nossos melhores serviços e promoções</h1>
+            <div>
+              <p className='font-bold m-1' >Precisa de Ajuda nas Compras?
+                <aside className=""><a href="">Fale com um atendente.</a></aside>
+              </p>
+              <p className='font-bold m-1' >Visite a Loja mais perto de Você!
+                <aside><a href="">Procure a loja mais perto de você</a></aside>
+              </p>
+            </div>
 
-        <Carousel cards={
-          [
-            {image: blackcat, description: "Gato",content: "Gato ato ato"},
-            {image: dogs, description: "Dogs",content: "Cachorro oro oro"},
-            {image: furao, description: "Furão",content: "Furao ao ao"},
-          ]
-        }></Carousel>
+          </div>
+
+          <Carousel cards={
+            [
+              {image: blackcat, description: "Gato",content: "Gato ato ato"},
+              {image: dogs, description: "Dogs",content: "Cachorro oro oro"},
+              {image: furao, description: "Furão",content: "Furao ao ao"},
+            ]
+          }></Carousel>
+        </div>
+
+        {/* Ofertas */}
+        <div>
+          <h2>
+            Ofertas Relâmpago
+          </h2>
+          
+          <div>
+            
+          </div>
+        </div>
 
       </div>
         

@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --primaryGreen: #4CAF50;
+    --secondaryGreen: #66BB6A;
+    --lightGray: #F4F4F4;
+    --darkText: #2E2E2E;
+    --accentOrange: #FFB74D;
+    --accentBlue: #4FC3F7;
+}
+
 body, html {
     padding: 0;
     margin: 0;
@@ -9,13 +18,26 @@ body, html {
     background-color: (230, 230, 230);
 }
 
-div, p, a, aside, label, h1, h2, h3 {
+div, label {
     font-family: 'Roboto', sans-serif;
-    color: white;
+    font-size: 12px;
+}
 
+aside, a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: var(--primaryGreen);
+    text-decoration: underline var(--primaryGreen);
 }
 
 h1 {
+    font-family: 'Roboto', sans-serif;
     font-size: 60px;
-    color: white;
+    color: var(--lightGray);
+}
+
+p, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: var(--darkText);
 }
