@@ -2,13 +2,16 @@
 import React from "react";
 
 // Importações de componentes do site
+import blackcat from "../assets/blackcat.png";
+import dogs from "../assets/dogs.jpeg";
+import furao from "../assets/furao.jpg";
+
+// Componentes
 import Navbar from "../components/Navbar";
 import Card from "../components/Card";
 import Button from "../components/Button";
 import Carousel from "../components/Carousel";
-import blackcat from "../assets/blackcat.png";
-import dogs from "../assets/dogs.jpeg";
-import furao from "../assets/furao.jpg";
+import CardCreator from "../components/CardCreator";
 
 
 
@@ -38,7 +41,7 @@ export default function Home() {
 
 
         {/* Carrossel */}
-        <div className="mt-10">
+        <div id="section">
           <div className='flex columns-2 align-top'>
             <h1 className="text-black">Confira os nossos melhores serviços e promoções</h1>
 
@@ -63,22 +66,54 @@ export default function Home() {
         </div>
 
         {/* Ofertas */}
-        <div className="mt-10">
+        <div id="section">
           <h2>
             Ofertas Relâmpago
           </h2>
-          
-          <div>
-          <Card
-            onClick={() => alert("Botão Clicado!")}
-            type="product_card"
-            image={dogs}
-            description={"Cachorro"}
-            className="w-[250px] h-[300px] flex flex-col items-center justify-center bg-white shadow-md"
-            >
-              <p className="text-black">Cartão</p>
+
+          <div className='flex'>
+            <Card
+              onClick={() => alert("Cartão Clicado!")}
+              type="product_card"
+              image={dogs}
+              description={"Cachorro"}
+              price="R$10,00"
+              rating={4}
+              className="w-[250px] h-[300px] flex flex-col items-center justify-center bg-white shadow-md"
+              >
+                <p className="text-black">Cartão</p>
             </Card>
+            <Card
+              onClick={() => alert("Cartão Clicado!")}
+              type="product_card"
+              image={dogs}
+              description={"Cachorro"}
+              price="R$10,00"
+              rating={4}
+              className="w-[250px] h-[300px] flex flex-col items-center justify-center bg-white shadow-md"
+              >
+                <p className="text-black">Cartão</p>
+            </Card>
+            <Card
+              onClick={() => alert("Cartão Clicado!")}
+              type="product_card"
+              image={dogs}
+              description={"Cachorro"}
+              price="R$10,00"
+              rating={4}
+              className="w-[250px] h-[300px] flex flex-col items-center justify-center bg-white shadow-md"
+              >
+                <p className="text-black">Cartão</p>
+            </Card> 
           </div>
+        </div>
+
+        {/* Produtos */}
+        
+        <div id="section">
+          <h1>Produtos Recomendados</h1>
+          
+
         </div>
 
       </div>

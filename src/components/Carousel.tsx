@@ -6,10 +6,11 @@ import React, { useState } from "react";
 import Card from "./Card";
 
 interface CarouselProps {
+  onClick?: () => void | undefined;
   cards: Array<{
-    image: string;
-    description: string;
-    content: string;
+  image: string;
+  description: string;
+  content: string;
   }>;
 }
 
@@ -41,7 +42,7 @@ const Carousel: React.FC<CarouselProps> = ({ cards }) => {
   };
 
   return (
-    <div className="relative w-full overflow-hidden">
+    <div className="relative w-full overflow-hidden p-5">
 
       {/* Cards */}
       <div className="relative flex justify-center items-center w-full h-[300px]">
@@ -61,6 +62,7 @@ const Carousel: React.FC<CarouselProps> = ({ cards }) => {
             }}
           >
             <Card
+              onClick={() => alert("Card clicado")}
               image={card.image}
               description={card.description}
               className="w-[250px] h-[300px] flex flex-col items-center justify-center bg-white shadow-md"

@@ -33,7 +33,7 @@ aside, a {
 h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 60px;
-    color: var(--lightGray);
+    color: var(--darkText);
 }
 
 h2, h3 {
@@ -41,6 +41,10 @@ h2, h3 {
     font-size: 22px;
     font-weight: bold;
     color: var(--darkText);
+}
+
+#section {
+    margin-top: 40px;
 }
 
 p {
