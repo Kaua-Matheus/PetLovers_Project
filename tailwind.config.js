@@ -23,6 +23,17 @@ export default {
         lg: "0 4px 10px rgba(0, 0, 0, 0.2)", // Sombra maior
         xl: "0 10px 15px rgba(0, 0, 0, 0.3)", // Sombra mais intensa
       },
+      fontSize: {
+        sm: "0.875rem",
+        base: "1rem",
+        lg: "1.125rem",
+        xl: "3rem",
+        '2xl': "1.5rem",
+        '3xl': "1.875rem",
+        '4xl': "2.25rem",
+        '5xl': "3rem",
+        '6xl': "4rem",
+      },
     },
   },
 }

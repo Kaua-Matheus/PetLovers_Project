@@ -11,8 +11,8 @@ interface CardProps {
   type?: "primary_card" | "product_card";
   image?: string;
   description?: string;
-  price?: string; // Adicionado para a variante de produto
-  rating?: number; // Adicionado para a variante de produto
+  price?: string;
+  rating?: number;
 }
 
 export default function Card({
@@ -52,6 +52,7 @@ export default function Card({
 
       {/* Conteúdo do Card */}
       <div className="p-4 flex flex-col items-center justify-center w-full">
+
         {/* Exibição de preço e nota apenas para 'product_card' */}
         {type === "product_card" && (
           <div className="mb-2 text-center">

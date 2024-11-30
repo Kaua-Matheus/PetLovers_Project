@@ -12,6 +12,8 @@ import Card from "../components/Card";
 import Button from "../components/Button";
 import Carousel from "../components/Carousel";
 import CardCreator from "../components/CardCreator";
+import ItemCard from "../components/ItemCard";
+import Service from "../components/Service";
 
 
 
@@ -113,8 +115,93 @@ export default function Home() {
         <div id="section">
           <h1>Produtos Recomendados</h1>
           
-
+          <div className="flex justify-center space-x-[2%]">
+            <ItemCard image={dogs} price={21} descount={1} totalComents={2} totalStars={2}>Produto</ItemCard>
+            <ItemCard image={dogs} price={21} descount={1} totalComents={2} totalStars={2}>Produto</ItemCard>
+            <ItemCard image={dogs} price={21} descount={1} totalComents={2} totalStars={2}>Produto</ItemCard>
+            <ItemCard image={dogs} price={21} descount={1} totalComents={2} totalStars={2}>Produto</ItemCard>
+          </div>
+          <div className="flex justify-center space-x-[2%] mt-2">
+            <ItemCard image={dogs} price={21} descount={1} totalComents={2} totalStars={2}>Produto</ItemCard>
+            <ItemCard image={dogs} price={21} descount={1} totalComents={2} totalStars={2}>Produto</ItemCard>
+            <ItemCard image={dogs} price={21} descount={1} totalComents={2} totalStars={2}>Produto</ItemCard>
+            <ItemCard image={dogs} price={21} descount={1} totalComents={2} totalStars={2}>Produto</ItemCard>
+          </div>
         </div>
+
+        {/* Marcas bem avaliadas */}
+        <div>
+          <h2 id="section">Marcas bem avaliadas</h2>
+
+          <div className="flex">
+          <Card
+              onClick={() => alert("Cartão Clicado!")}
+              type="product_card"
+              image={dogs}
+              description={"Cachorro"}
+              price="R$10,00"
+              rating={4}
+              className="w-[250px] h-[300px] flex flex-col items-center justify-center bg-white shadow-md"
+              >
+                <p className="text-black">Cartão</p>
+            </Card> 
+            <Card
+              onClick={() => alert("Cartão Clicado!")}
+              type="product_card"
+              image={dogs}
+              description={"Cachorro"}
+              price="R$10,00"
+              rating={4}
+              className="w-[250px] h-[300px] flex flex-col items-center justify-center bg-white shadow-md"
+              >
+                <p className="text-black">Cartão</p>
+            </Card> 
+            <Card
+              onClick={() => alert("Cartão Clicado!")}
+              type="product_card"
+              image={dogs}
+              description={"Cachorro"}
+              price="R$10,00"
+              rating={4}
+              className="w-[250px] h-[300px] flex flex-col items-center justify-center bg-white shadow-md"
+              >
+                <p className="text-black">Cartão</p>
+            </Card> 
+          </div>
+        </div>
+
+        {/* Marcas em estoque */}
+        <div id='section'>
+          <h1>+140 Marcas em estoque</h1>
+          <div className="flex items-center justify-center col-3 columns-4 space-x-2">
+              <img className="h-[10rem] w-[10rem]" src={blackcat} alt="Gato preto" />
+              <img className="h-[10rem] w-[10rem]" src={dogs} alt="Cachoxinhos" />
+              <img className="h-[10rem] w-[10rem]" src={blackcat} alt="Gato preto" />
+              <img className="h-[10rem] w-[10rem]" src={dogs} alt="Cachoxinhos" />
+              <img className="h-[10rem] w-[10rem]" src={blackcat} alt="Gato preto" />
+              <img className="h-[10rem] w-[10rem]" src={dogs} alt="Cachoxinhos" />
+          </div>
+        </div>
+
+        {/* Missão */}
+        <div id='section'>
+          <h1 id="pacifico" className="text-xl">PetLovers</h1>
+          <p>Nossa missão é trazer maior conforto e carinho aos nossos tão amados animaizinhos, visamos sempre o bem estar e o ótimo estilo de vida para os nossos <strong id="pacifico" className="text-lg">Pets</strong>.</p>
+          <a href="#">Leia Mais</a>
+        </div>
+
+        {/* Confira os nossos Serviços */}
+        <div>
+          <h1 id='section'>Confira os nossos Serviços</h1>
+          <div className="flex">
+            <Service image={blackcat}>Banho e tosa</Service>
+            <Service image={furao}>Consultas Veterinárias</Service>
+            <Service image={dogs}>Pet Grooming</Service>
+            <Service image={blackcat}>Pet Hotel</Service>
+            <Service image={furao}>Dog Walking</Service>
+          </div>
+        </div>
+        
 
       </div>
         

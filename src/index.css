@@ -47,6 +47,11 @@ h2, h3 {
     margin-top: 40px;
 }
 
+#pacifico {
+    font-family: 'Pacifico', cursive;
+    color: var(--darkText);
+}
+
 p {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
