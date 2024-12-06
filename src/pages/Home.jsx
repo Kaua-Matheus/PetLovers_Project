@@ -14,6 +14,7 @@ import Carousel from "../components/Carousel";
 import CardCreator from "../components/CardCreator";
 import ItemCard from "../components/ItemCard";
 import Service from "../components/Service";
+import Footer from "../components/Footer";
 
 
 
@@ -202,8 +203,34 @@ export default function Home() {
           </div>
         </div>
         
+        {/* Blog */}
+        <div>
+          <h1 id='section'>Venha ver o nosso Blog</h1>
+
+          <div>
+            <h2>Adoção Animal</h2>
+            <p>Espaço de adoção animal acontecerá neste sábado, o evento visa a facilitação de adoção de animais em situação de abandono. Haverá também dicas de proteção e cuidados com os Pets.</p>
+          </div>
+
+          <div>
+            <h2>Veja as Imagens</h2>
+            <div className="flex h-[32rem] space-x-2">
+              <img src={dogs} alt="Cachorrinhos" />
+              <div className="space-y-2">
+                <img className='h-[15.75rem]' src={blackcat} alt="Gato preto" />
+                <img className='h-[15.75rem]' src={furao} alt="Furão" />
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
+
+      <footer>
+        <Footer image={blackcat} alt_image="BlackCat">
+          <p>Desenvolvido por <a href="https://github.com/Kaua-Matheus">Kaua-Matheus</a></p>
+        </Footer>
+      </footer>
         
     </body>
   )
