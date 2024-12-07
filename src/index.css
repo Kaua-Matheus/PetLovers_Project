@@ -12,8 +12,10 @@
 }
 
 body, html {
+    height: 100%;
     padding: 0;
     margin: 0;
+    box-sizing: 0;
     height: 100%;
     background-color: (230, 230, 230);
 }

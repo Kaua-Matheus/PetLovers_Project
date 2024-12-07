@@ -79,12 +79,18 @@ export default function ItemCard({
                     {children}
                 </div>
 
-                <div className="flex space-x-4">
-                        <p className="flex items-center text-sm text-yellow-500">{totalStars}<FaStar />
-                        </p>
-                        <p className="flex items-center text-sm text-gray-500">{totalComents}<FaCommentAlt />
+                <div className="flex space-x-3">
+                        <div className="flex items-center space-x-[0.2rem]">
+                            <p className="flex items-center text-sm text-yellow-500">{totalStars}
+                            </p>
+                            <FaStar className="text-yellow-500"/>
+                        </div>
 
-                        </p>
+                        <div className="flex items-center space-x-[0.2rem]">  
+                            <p className="flex items-center text-sm text-gray-500">{totalComents}
+                            </p>
+                            <FaCommentAlt className="text-gray-500"/>
+                        </div>
                 </div>
 
                 <div className='flex space-x-3 items-center'>
