@@ -18,10 +18,10 @@ export default {
         accentBlue: '#4FC3F7',
       },
       boxShadow: {
-        sm: "0 1px 3px rgba(0, 0, 0, 0.12)", // Sombra suave personalizada
-        md: "0 2px 6px rgba(0, 0, 0, 0.15)", // Sombra média
-        lg: "0 4px 10px rgba(0, 0, 0, 0.2)", // Sombra maior
-        xl: "0 10px 15px rgba(0, 0, 0, 0.3)", // Sombra mais intensa
+        sm: "0 1px 2px rgba(0, 0, 0, 0.12)", 
+        md: "0 2px 2px rgba(0, 0, 0, 0.15)", 
+        lg: "0 3px 4px rgba(0, 0, 0, 0.2)", 
+        xl: "0 5px 6px rgba(0, 0, 0, 0.3)", 
       },
       fontSize: {
         sm: "0.875rem",

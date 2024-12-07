@@ -5,7 +5,7 @@
 :root {
     --primaryGreen: #4CAF50;
     --secondaryGreen: #66BB6A;
-    --lightGray: #F4F4F4;
+    --lightGray: #CACACA;
     --darkText: #2E2E2E;
     --accentOrange: #FFB74D;
     --accentBlue: #4FC3F7;
@@ -25,7 +25,7 @@ div, label {
 
 aside, a {
     font-family: 'Inter', sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     color: var(--primaryGreen);
     text-decoration: underline var(--primaryGreen);
 }

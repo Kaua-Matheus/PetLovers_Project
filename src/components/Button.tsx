@@ -25,8 +25,8 @@ export default function Button ({
                 active:translate-y-0.5 active:shadow-none`
             
         const variants = {
-            primary_button: `h-8 border-none rounded shadow-sm text-gray-800 bg-white hover:text-white hover:bg-gray-800 px-4 font-semibold`,
-            secundary_button: `h-20 rounded-full text-center text-md border-none mx-2 shadow-black shadow-sm text-gray-800 bg-white hover:text-white hover:bg-gray-800 py-3 w-52 font-bold`,
+            primary_button: `h-8 px-4 border-none rounded shadow-sm text-gray-800 bg-white hover:text-white hover:bg-gray-800 font-semibold`,
+            secundary_button: `h-20 w-52 rounded-full text-center shadow-md shadow-lg border-none text-gray-800 bg-white hover:text-white hover:bg-gray-800 font-bold`,
             buy_button: `border-none shadow-black shadow-sm text-gray-800 bg-white hover:text-white hover:bg-green-800 px-4 font-semibold`
         };
 

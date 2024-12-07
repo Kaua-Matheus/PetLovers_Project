@@ -42,7 +42,7 @@ export default function ItemCard({
             {/* Curtir e Compartilhar */}
             <div className="flex justify-end p-2 space-x-2">
                     <button onClick={() => alert("Compartilhado!")} className="
-                        bg-lightGray 
+                        bg-white 
                         text-gray-800 
                         p-2
                         rounded-md 
@@ -53,7 +53,7 @@ export default function ItemCard({
                         <FaShareAlt />
                     </button>
                     <button onClick={() => setIsHeart(!isHeart)} className="
-                        bg-lightGray 
+                        bg-white
                         text-gray-800 
                         p-2
                         rounded-md 

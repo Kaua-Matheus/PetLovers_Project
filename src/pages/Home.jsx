@@ -35,7 +35,7 @@ export default function Home() {
       <div className='mx-32 p-5'>
 
         {/* Topo */}
-        <div className='flex justify-center'>
+        <div className='flex justify-center space-x-6'>
           <Button type='secundary_button' onClick={() => alert("Botão Clicado!")} >Receba em horas</Button>
           <Button type='secundary_button' onClick={() => alert("Botão Clicado!")} >Frete Grátis</Button>
           <Button type='secundary_button' onClick={() => alert("Botão Clicado!")} >Até 10X</Button>
@@ -228,7 +228,7 @@ export default function Home() {
 
       <footer>
         <Footer image={blackcat} alt_image="BlackCat">
-          <p>Desenvolvido por <a href="https://github.com/Kaua-Matheus">Kaua-Matheus</a></p>
+          <p>Desenvolvido por <a href="https://github.com/Kaua-Matheus" target="_blank">Kaua-Matheus</a></p>
         </Footer>
       </footer>
         
