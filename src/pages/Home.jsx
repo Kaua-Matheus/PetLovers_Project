@@ -15,6 +15,7 @@ import CardCreator from "../components/CardCreator";
 import ItemCard from "../components/ItemCard";
 import Service from "../components/Service";
 import Footer from "../components/Footer";
+import FullscreenImage from "../components/FullscreenImage";
 
 
 
@@ -211,14 +212,18 @@ export default function Home() {
             <h2>Adoção Animal</h2>
             <p>Espaço de adoção animal acontecerá neste sábado, o evento visa a facilitação de adoção de animais em situação de abandono. Haverá também dicas de proteção e cuidados com os Pets.</p>
           </div>
-
+          
+          {/* 
+            Arrumar para que a tela trave quando as imagens estiverem em fullscreen
+            Arrumar o fundo para que não fiquem espaços em branco 
+          */}
           <div className="py-2 space-y-2">
             <h3>Veja as Imagens</h3>
             <div className="flex h-[32rem] space-x-2">
-              <img src={dogs} alt="Cachorrinhos" />
+              <FullscreenImage src={dogs} alt="Cachorrinhos"/>
               <div className="space-y-2">
-                <img className='h-[15.75rem]' src={blackcat} alt="Gato preto" />
-                <img className='h-[15.75rem]' src={furao} alt="Furão" />
+                <FullscreenImage css='h-[15.75rem]' src={blackcat} alt="Gato preto"/>
+                <FullscreenImage css='h-[15.75rem]' src={furao} alt="Furão"/>
               </div>
             </div>
           </div>

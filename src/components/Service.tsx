@@ -12,7 +12,11 @@ export default function Service({
     children,
 }: ServiceProps) {
     return (
-        <div className="card bg-white image-full w-[15rem] h-auto shadow-sm mx-2 p-4 rounded cursor-pointer flex items-center flex-col space-y-4">
+        <div className="
+            card bg-white image-full w-[15rem] 
+            h-auto shadow-md mx-2 p-4 rounded cursor-pointer 
+            flex items-center flex-col space-y-4
+            active:translate-y-0.5 active:shadow-none">
             <img className="rounded-full object-cover w-[10rem] h-[10rem] overflow-hidden flex items-center justify-center" 
             src={image} alt="" />
 
