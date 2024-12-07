@@ -18,42 +18,58 @@ body, html {
     background-color: (230, 230, 230);
 }
 
-div, label {
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-}
-
-aside, a {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    color: var(--primaryGreen);
-    text-decoration: underline var(--primaryGreen);
-}
-
 h1 {
+    margin-top: 40px;
     font-family: 'Inter', sans-serif;
-    font-size: 60px;
-    color: var(--darkText);
-}
-
-h2, h3 {
-    font-family: 'Inter', sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     color: var(--darkText);
+
+    max-width: 500px;
+    line-height: 1.5; /* Espaçamento entre as linhas */
 }
 
-#section {
-    margin-top: 40px;
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--darkText);
+
+    max-width: 500px;
+    line-height: 1.0; /* Espaçamento entre as linhas */
+}
+
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: var(--darkText);
+
+    max-width: 500px;
+    line-height: 1.0; /* Espaçamento entre as linhas */
 }
 
 #pacifico {
+    font-size: 20px;
     font-family: 'Pacifico', cursive;
     color: var(--darkText);
 }
 
 p {
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--darkText);
+
+    line-height: 1.0; /* Espaçamento entre as linhas */
+}
+
+div, label {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+aside, a {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--primaryGreen);
+    text-decoration: underline var(--primaryGreen);
 }

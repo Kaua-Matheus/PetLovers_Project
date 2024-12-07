@@ -35,7 +35,7 @@ export default function Home() {
       <div className='mx-32 p-5'>
 
         {/* Topo */}
-        <div className='flex justify-center space-x-6'>
+        <div className='flex justify-center space-x-6 '>
           <Button type='secundary_button' onClick={() => alert("Botão Clicado!")} >Receba em horas</Button>
           <Button type='secundary_button' onClick={() => alert("Botão Clicado!")} >Frete Grátis</Button>
           <Button type='secundary_button' onClick={() => alert("Botão Clicado!")} >Até 10X</Button>
@@ -44,9 +44,9 @@ export default function Home() {
 
 
         {/* Carrossel */}
-        <div id="section">
-          <div className='flex columns-2 align-top'>
-            <h1 className="text-black">Confira os nossos melhores serviços e promoções</h1>
+        <div>
+          <div className='flex columns-2 align-top space-x-[18rem]'>
+            <h1>Confira os nossos melhores serviços e promoções</h1>
 
             <div>
               <p className='font-bold m-1' >Precisa de Ajuda nas Compras?
@@ -69,10 +69,10 @@ export default function Home() {
         </div>
 
         {/* Ofertas */}
-        <div id="section">
-          <h2>
+        <div>
+          <h1>
             Ofertas Relâmpago
-          </h2>
+          </h1>
 
           <div className='flex'>
             <Card
@@ -113,7 +113,7 @@ export default function Home() {
 
         {/* Produtos */}
         
-        <div id="section">
+        <div>
           <h1>Produtos Recomendados</h1>
           
           <div className="flex justify-center space-x-[2%]">
@@ -132,7 +132,7 @@ export default function Home() {
 
         {/* Marcas bem avaliadas */}
         <div>
-          <h2 id="section">Marcas bem avaliadas</h2>
+          <h1>Marcas bem avaliadas</h1>
 
           <div className="flex">
           <Card
@@ -187,7 +187,7 @@ export default function Home() {
         {/* Missão */}
         <div id='section'>
           <h1 id="pacifico" className="text-xl">PetLovers</h1>
-          <p>Nossa missão é trazer maior conforto e carinho aos nossos tão amados animaizinhos, visamos sempre o bem estar e o ótimo estilo de vida para os nossos <strong id="pacifico" className="text-lg">Pets</strong>.</p>
+          <p>Nossa missão é trazer maior conforto e carinho aos nossos tão amados animaizinhos, visamos sempre o bem estar e o ótimo estilo de vida para os nossos <strong id="pacifico" >Pets</strong>.</p>
           <a href="#">Leia Mais</a>
         </div>
 
@@ -212,8 +212,8 @@ export default function Home() {
             <p>Espaço de adoção animal acontecerá neste sábado, o evento visa a facilitação de adoção de animais em situação de abandono. Haverá também dicas de proteção e cuidados com os Pets.</p>
           </div>
 
-          <div>
-            <h2>Veja as Imagens</h2>
+          <div className="py-2 space-y-2">
+            <h3>Veja as Imagens</h3>
             <div className="flex h-[32rem] space-x-2">
               <img src={dogs} alt="Cachorrinhos" />
               <div className="space-y-2">
