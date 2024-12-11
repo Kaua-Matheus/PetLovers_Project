@@ -1,5 +1,6 @@
 // Importações externas
 import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react-router-dom";
 
 // Importações de componentes do site
 import blackcat from "../assets/blackcat.png";
@@ -7,19 +8,28 @@ import dogs from "../assets/dogs.jpeg";
 import furao from "../assets/furao.jpg";
 
 // Componentes
-import Navbar from "../components/Navbar";
-import Card from "../components/Card";
 import Button from "../components/Button";
-import Carousel from "../components/Carousel";
+import Card from "../components/Card";
 import CardCreator from "../components/CardCreator";
-import ItemCard from "../components/ItemCard";
-import Service from "../components/Service";
+import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
 import FullscreenImage from "../components/FullscreenImage";
+import ItemCard from "../components/ItemCard";
+import Navbar from "../components/Navbar";
+import Service from "../components/Service";
+
+// Páginas
+import About from  "./About";
 
 
+function Home() {
 
-export default function Home() {
+  const navigate = useNavigate();
+
+  const handleNavigation = () => {
+    navigate("/About");
+  };
+
   return (
     
     <body>
@@ -34,10 +44,10 @@ export default function Home() {
       </header>
       
       <div className='mx-32 p-5'>
-
+      
         {/* Topo */}
         <div className='flex justify-center space-x-6 '>
-          <Button type='secundary_button' onClick={() => alert("Botão Clicado!")} >Receba em horas</Button>
+          <Button type='secundary_button' onClick={handleNavigation} >Receba em horas</Button>
           <Button type='secundary_button' onClick={() => alert("Botão Clicado!")} >Frete Grátis</Button>
           <Button type='secundary_button' onClick={() => alert("Botão Clicado!")} >Até 10X</Button>
           <Button type='secundary_button' onClick={() => alert("Botão Clicado!")} >Retire e Troque</Button>
@@ -205,7 +215,7 @@ export default function Home() {
         </div>
         
         {/* Blog */}
-        <div>
+        <div className="flex flex-col justify-center">
           <h1 id='section'>Venha ver o nosso Blog</h1>
 
           <div>
@@ -240,3 +250,5 @@ export default function Home() {
     </body>
   )
 }
+
+export default Home;

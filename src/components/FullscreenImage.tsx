@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 interface FullscreenImageProps {
   src: string;
   alt: string;
-  css: string;
+  css?: string;
 }
 
 // Arrumar para que a tela trave quando as imagens estiverem em fullscreen

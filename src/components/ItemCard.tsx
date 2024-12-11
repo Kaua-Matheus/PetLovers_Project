@@ -12,12 +12,12 @@ import { FaCommentAlt } from "react-icons/fa";
 interface ItemCard {
     image?: string;
     imageDescription?: string;
-    share: () => void;
-    onClick: () => void;
+    share?: () => void;
+    onClick?: () => void;
     children: ReactNode;
-    heart: boolean;
+    heart?: boolean;
     price: number;
-    descount?: number | 0;
+    descount: number | 0;
     totalComents: number;
     totalStars: number;
 }
