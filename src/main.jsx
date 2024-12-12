@@ -1,10 +1,13 @@
 import { createRoot } from 'react-dom/client'
+import Home from './pages/HomePage.jsx'
+import './styles/global.css'
+
 import { BrowserRouter } from 'react-router-dom'
-import App from './pages/Home.jsx'
-import './index.css'
+import MainRoutes from './routes'
+
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-    <App />
+    <MainRoutes/>
   </BrowserRouter>,
 )

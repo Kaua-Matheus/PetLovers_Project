@@ -3,6 +3,8 @@ import Button from "./Button"
 import Menu from "./Menu"
 import Search from "./Search"
 
+import { Link } from 'react-router-dom';
+
 const Navbar = () => {
   return (
     
@@ -14,10 +16,10 @@ const Navbar = () => {
             <div class="flex-1 p-0.5">
 
                 <Button onClick={() => alert("Botão Clicado!")} >Contato</Button>
-                <Button onClick={() => alert("Botão Clicado!")} >Sobre nós</Button>
+                <Link to='/about'> <Button>Sobre nós</Button> </Link>
                 <Button onClick={() => alert("Botão Clicado!")} >Blog</Button>
                 <Button onClick={() => alert("Botão Clicado!")} >Produtos</Button>
-                <Button onClick={() => alert("Botão Clicado!")} >Serviços</Button>
+                <Link to='/services'> <Button >Serviços</Button> </Link>
 
             </div>
 
