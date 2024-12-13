@@ -13,7 +13,7 @@ function MainRoutes(){
 
         <Routes>
             <Route element={<Home />} path='/' />
-            <Route element={<About />} path='/about' />
+            <Route element={<About />} path='/sobre' />
             <Route element={<Services />} path='/servicos' />
             <Route element={<Support />} path='/suporte' />
         </Routes>

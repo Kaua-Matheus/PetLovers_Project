@@ -16,10 +16,10 @@ const Navbar = () => {
             <div class="flex-1 p-0.5">
 
                 <Button onClick={() => alert("Botão Clicado!")} >Contato</Button>
-                <Link to='/about'> <Button>Sobre nós</Button> </Link>
+                <Link to='/sobre'> <Button>Sobre nós</Button> </Link>
                 <Button onClick={() => alert("Botão Clicado!")} >Blog</Button>
                 <Button onClick={() => alert("Botão Clicado!")} >Produtos</Button>
-                <Link to='/services'> <Button >Serviços</Button> </Link>
+                <Link to='/servicos'> <Button >Serviços</Button> </Link>
 
             </div>
 
