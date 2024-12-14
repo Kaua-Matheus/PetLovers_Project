@@ -22,8 +22,8 @@ function HomePage() {
   return (
     
     <body>
-      <Navbar />
 
+      <Navbar />
       
       <main className='mx-32 p-5'>
       
@@ -165,7 +165,7 @@ function HomePage() {
         </div>
 
         {/* Marcas em estoque */}
-        <div id='section'>
+        <div>
           <h1>+140 Marcas em estoque</h1>
           <div className="flex items-center justify-center col-3 columns-4 space-x-2">
               <img className="h-[10rem] w-[10rem]" src={blackcat} alt="Gato preto" />
@@ -178,7 +178,7 @@ function HomePage() {
         </div>
 
         {/* Missão */}
-        <div id='section'>
+        <div>
           <h1 id="pacifico" className="text-xl">PetLovers</h1>
           <p>Nossa missão é trazer maior conforto e carinho aos nossos tão amados animaizinhos, visamos sempre o bem estar e o ótimo estilo de vida para os nossos <strong id="pacifico" >Pets</strong>.</p>
           <a href="#">Leia Mais</a>
@@ -186,8 +186,8 @@ function HomePage() {
 
         {/* Confira os nossos Serviços */}
         <div>
-          <h1 id='section'>Confira os nossos Serviços</h1>
-          <div className="flex">
+          <h1>Confira os nossos Serviços</h1>
+          <div className="flex justify-center">
             <Service image={blackcat}>Banho e tosa</Service>
             <Service image={furao}>Consultas Veterinárias</Service>
             <Service image={dogs}>Pet Grooming</Service>
@@ -198,7 +198,7 @@ function HomePage() {
         
         {/* Blog */}
         <div className="flex flex-col justify-center">
-          <h1 id='section'>Venha ver o nosso Blog</h1>
+          <h1>Venha ver o nosso Blog</h1>
 
           <div>
             <h2>Adoção Animal</h2>
@@ -210,8 +210,7 @@ function HomePage() {
             Arrumar o fundo para que não fiquem espaços em branco 
           */}
           <div className="py-2 space-y-2">
-            <h3>Veja as Imagens</h3>
-            <div className="flex h-[32rem] space-x-2">
+            <div className="flex h-[32rem] space-x-2 justify-center">
               <FullscreenImage src={dogs} alt="Cachorrinhos"/>
               <div className="space-y-2">
                 <FullscreenImage css='h-[15.75rem]' src={blackcat} alt="Gato preto"/>

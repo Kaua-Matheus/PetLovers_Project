@@ -37,6 +37,15 @@ body, html {
     background-color: (230, 230, 230);
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+
+    text-align: justify;
+    margin: 0 auto;
+    width: 80%;
+}
+
 h1 {
     margin-top: 40px;
     font-family: 'Inter', sans-serif;
