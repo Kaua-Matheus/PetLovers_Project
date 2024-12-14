@@ -1,5 +1,5 @@
 "use client"
-import React, { ReactNode } from "react";
+import React, { Children, ReactNode } from "react";
 
 import { 
     FaCcVisa, 
@@ -11,23 +11,22 @@ import {
 import { SiMastercard } from "react-icons/si";
 import { FaPix } from "react-icons/fa6";
 
-
+import image from "../assets/blackcat.png";
 
 interface FooterProps {
     image?: string;
     alt_image?: string;
-    children: ReactNode;
+    
 }
 
 export default function Footer(
     {
         image,
         alt_image,
-        children,
     }
 ) {
     return (
-        <div className="p-1 text-center">
+        <div className="p-1 text-center flex-col min-h-screen">
             <div className="space-x-10 text-center align-middle justify-center flex p-2">
                 <img className="h-[5rem]" src={image} alt={alt_image} />
                 <div className="flex space-x-4">
@@ -68,9 +67,12 @@ export default function Footer(
                     </a >
                 </div>
             </div>
-
-            {children}
+            <p>Desenvolvido por <a href="https://github.com/Kaua-Matheus" target="_blank">Kaua-Matheus</a></p>
         </div>
     )
 
+};
+Footer.defaultProps = {
+    image: image,
+    alt_image: "Logo da empresa"
 };

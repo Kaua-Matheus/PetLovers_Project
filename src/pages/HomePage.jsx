@@ -222,11 +222,7 @@ function HomePage() {
 
       </main>
 
-      <footer>
-        <Footer image={blackcat} alt_image="BlackCat">
-          <p>Desenvolvido por <a href="https://github.com/Kaua-Matheus" target="_blank">Kaua-Matheus</a></p>
-        </Footer>
-      </footer>
+        <Footer image={blackcat} alt_image="BlackCat"/>
         
     </body>
   )
