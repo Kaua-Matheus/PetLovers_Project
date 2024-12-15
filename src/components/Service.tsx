@@ -1,16 +1,25 @@
 'use client';
 
 import React, { ReactNode } from 'react';
+import { Link } from 'react-router-dom';
+
+import blackcat from '../assets/blackcat.png';
 
 interface ServiceProps {
-    image: string;
-    children: ReactNode;
+    type?: 'basic' | 'detailed';
+    image?: string;
+    children?: ReactNode;
+    details?: {
+        description?: string;
+    }
   };
 
-export default function Service({
+const Service: React.FC<ServiceProps> = ({
+    type,
     image,
     children,
-}: ServiceProps) {
+    details,
+}) => { 
     return (
         <div className="
             card bg-white image-full w-[15rem] 
@@ -23,7 +32,19 @@ export default function Service({
             <div className='text-center text-darkGray text-sm'>
                 {children}
             </div>
+
+            {type === 'detailed' && (
+                <div className='text-center text-darkGray text-sm'>
+                    {details?.description}
+                </div>
+            )}
             
         </div>
     );
+}
+
+Service.defaultProps = {
+    type: 'basic',
+    image: blackcat,
+    children: 'Nome do serviço',
 }
