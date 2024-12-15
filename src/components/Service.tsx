@@ -2,7 +2,6 @@
 
 import React, { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-
 import blackcat from '../assets/blackcat.png';
 
 interface ServiceProps {
@@ -12,7 +11,7 @@ interface ServiceProps {
     details?: {
         description?: string;
     }
-  };
+  }
 
 const Service: React.FC<ServiceProps> = ({
     type,
@@ -47,4 +46,9 @@ Service.defaultProps = {
     type: 'basic',
     image: blackcat,
     children: 'Nome do serviço',
+    details: {
+        description: 'Descrição do serviço'
+    }
 }
+
+export default Service;

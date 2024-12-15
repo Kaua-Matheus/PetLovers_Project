@@ -188,11 +188,11 @@ function HomePage() {
         <div>
           <h1>Confira os nossos Serviços</h1>
           <div className="flex justify-center">
-            <Service image={blackcat}>Banho e tosa</Service>
-            <Service image={furao}>Consultas Veterinárias</Service>
-            <Service image={dogs}>Pet Grooming</Service>
-            <Service image={blackcat}>Pet Hotel</Service>
-            <Service image={furao}>Dog Walking</Service>
+            <Service type='basic' image={blackcat}>Banho e tosa</Service>
+            <Service type='basic' image={furao}>Consultas Veterinárias</Service>
+            <Service type='basic' image={dogs}>Pet Grooming</Service>
+            <Service type='basic' image={blackcat}>Pet Hotel</Service>
+            <Service type='basic' image={furao}>Dog Walking</Service>
           </div>
         </div>
         
