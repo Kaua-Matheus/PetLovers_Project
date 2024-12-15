@@ -51,27 +51,12 @@ export default function ServicosPage() {
         </div>
 
         <div className='mt-12'>
-            <div className="flex flex-row space-x-4 p-4">
-                <Service image={blackcat}>Banho e tosa</Service> 
 
-                <aside className='p-4'>
-                    <p className='text-lg'>
-                        O serviço de Banho e Tosa visa cuidar da saúde 
-                        e da higiene de seu Pet, dando banho, higienizando 
-                        e aparando os pelos do animal, seja ele gato, cachorro ou ave!
-                    </p >
+              <Service type='detailed'></Service>
+              <Service css='mt-10' type='detailed'></Service>
+              <Service css='mt-10' type='detailed'></Service>
+              <Service css='mt-10' type='detailed'></Service>
 
-                    <div className="flex absolute bottom-10 space-x-[35rem]">
-                      <div>
-                        <h2>Veja mais detalhes</h2>
-                        <Link><a>Acesse nosso Blog</a></Link>
-                      </div>
-                      <Button onClick={ () => alert("Serviço agendado! ")}>Agendar Serviço</Button>
-                    </div>
-                </aside >
-              </div >
-
-              {/* <Service type=''>Banho e Tosa</Service> */}
         </div >
 
 
