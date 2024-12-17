@@ -8,11 +8,13 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-        
-    <div class='fixed top-0 w-full z-50 flex space-x-4 md:space-x-32 lg:space-x-96 px-24 h-12 bg-gray-100 shadow-md justify-center items-center'>
+      
+    // Arrumar o "fixed" para que o menu fique fixo no topo da página
+    <div class='top-0 w-full z-50 flex space-x-4 md:space-x-32 lg:space-x-96 px-24 h-12 bg-gray-100 shadow-md justify-center items-center'>
         
       {/* Botões */}
       <div class="flex space-x-2">
+
           <Link to='/'>
             <button  className="
               ml-12 h-8 btn btn-sm border-none rounded shadow-sm 
@@ -20,14 +22,29 @@ const Navbar = () => {
               active:translate-y-0.5 active:shadow-none">
               <FaHome/>
             </button>
-          </Link>
-          <Button onClick={() => alert("Botão Clicado!")} >Contato</Button>
+          </Link >
+
+
+          <Link to='/contato'>
+            <Button>Contato</Button>
+          </Link >
+
           <Link to='/sobre' > 
             <Button>Sobre nós</Button> 
           </Link >
-          <Button onClick={() => alert("Botão Clicado!")} >Blog</Button>
-          <Button onClick={() => alert("Botão Clicado!")} >Produtos</Button>
-          <Link to='/servicos' > <Button >Serviços</Button> </Link>
+
+          <Link to='/blog'>
+            <Button>Blog</Button>
+          </Link >
+
+          <Link to='/produtos'>
+            <Button>Produtos</Button>
+          </Link >
+
+          <Link to='/servicos' >
+            <Button >Serviços</Button> 
+          </Link >
+
       </div>
 
       <div className='flex'>

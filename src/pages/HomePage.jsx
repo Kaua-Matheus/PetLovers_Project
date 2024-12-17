@@ -28,7 +28,7 @@ function HomePage() {
       <main className='mx-32 p-5'>
       
         {/* Topo */}
-        <div className='flex justify-center space-x-6 '>
+        <div className='flex justify-center space-x-6 mb-12'>
           <Button type='secundary_button' onClick={() => alert("Botão Clicado!")} >Receba em horas</Button>
           <Button type='secundary_button' onClick={() => alert("Botão Clicado!")} >Frete Grátis</Button>
           <Button type='secundary_button' onClick={() => alert("Botão Clicado!")} >Até 10X</Button>
