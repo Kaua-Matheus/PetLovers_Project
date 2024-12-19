@@ -18,9 +18,9 @@ export default {
         accentBlue: '#4FC3F7',
       },
       boxShadow: {
-        sm: "0 1px 2px rgba(0, 0, 0, 0.12)", 
-        md: "0 2px 2px rgba(0, 0, 0, 0.15)", 
-        lg: "0 3px 4px rgba(0, 0, 0, 0.2)", 
+        sm: "0 2px 2px rgba(0, 0, 0, 0.2)", 
+        md: "0 2px 2px rgba(0, 0, 0, 0.22)", 
+        lg: "0 3px 4px rgba(0, 0, 0, 0.24)", 
         xl: "0 5px 6px rgba(0, 0, 0, 0.3)", 
       },
       fontSize: {
