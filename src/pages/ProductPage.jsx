@@ -12,7 +12,7 @@ export default function ProductPage() {
   return (
     <body>
       <Navbar></Navbar>
-      <main className='mx-32 p-5'>
+      <main className='mx-32 p-5 mt-10'>
         <div>
           <h1>Produtos Recomendados!</h1>
           <Carousel type='product' cards={

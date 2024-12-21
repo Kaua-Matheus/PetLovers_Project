@@ -19,7 +19,7 @@ export default function ServicosPage() {
 
       <Navbar />      
 
-      <main>
+      <main className='mx-32 p-5 mt-10'>
 
         <div>
             <h1 className='mb-4'>Beneficios dos serviços feitos conosco.</h1>

@@ -9,10 +9,8 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
       
-    // Arrumar o "fixed" para que o menu fique fixo no topo da página
-    <div class='top-0 w-full z-50 flex space-x-4 md:space-x-32 lg:space-x-96 px-24 h-12 bg-gray-100 shadow-md justify-center items-center'>
+    <div class='fixed top-0 w-full z-50 flex space-x-4 md:space-x-32 lg:space-x-96 px-24 h-12 bg-gray-100 shadow-md justify-center items-center'>
         
-      {/* Botões */}
       <div class="flex space-x-2">
 
           <Link to='/'>

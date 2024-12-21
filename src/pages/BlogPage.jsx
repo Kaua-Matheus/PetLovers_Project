@@ -16,7 +16,7 @@ export default function BlogPage() {
 
         <Navbar />
         
-        <main className='mx-32 p-5'>
+        <main className='mx-32 p-5 mt-10'>
 
             <h1>Ultimas notícias</h1>
             <div className="flex flex-row space-x-20">

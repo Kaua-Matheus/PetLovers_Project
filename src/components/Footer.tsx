@@ -26,7 +26,7 @@ export default function Footer(
     }
 ) {
     return (
-        <div className="p-1 text-center flex-col min-h-screen mt-10">
+        <div className="p-1 text-center flex-col mt-14">
             <div className="space-x-10 text-center align-middle justify-center flex p-2">
                 <img className="h-[5rem]" src={image} alt={alt_image} />
                 <div className="flex space-x-4">

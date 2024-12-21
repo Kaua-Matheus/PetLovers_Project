@@ -25,7 +25,7 @@ function HomePage() {
 
       <Navbar />
       
-      <main className='mx-32 p-5'>
+      <main className='mx-32 p-5 mt-10'>
       
         {/* Topo */}
         <div className='flex justify-center space-x-6 mb-12'>

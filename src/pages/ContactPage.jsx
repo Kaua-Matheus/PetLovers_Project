@@ -101,7 +101,7 @@ export default function ContactPage() {
 
         <Navbar />
         
-        <main className='mx-32 p-5'>
+        <main className='mx-32 p-5 mt-10'>
 
             {/* Banner de Suporte - Arrumar a qualidade */}
             <div className='flex justify-center bg-[url(../assets/petlovers_background.avif)] items-center rounded-lg shadow-md h-24  bg-cover bg-center'>

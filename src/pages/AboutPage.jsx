@@ -8,7 +8,7 @@ function AboutPage() {
 
       <Navbar />      
 
-      <main>
+      <main className='mx-32 p-5 mt-10'>
 
         <div className="p-10 space-y-4">
         
