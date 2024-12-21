@@ -4,6 +4,7 @@ import { BiSolidLeftArrowSquare } from "react-icons/bi";
 
 import React, { useState } from "react";
 import Card from "./Card";
+import ItemCard from "./ItemCard";
 
 interface CarouselProps {
   onClick?: () => void | undefined;
@@ -12,24 +13,29 @@ interface CarouselProps {
   description: string;
   content: string;
   }>;
+  type?: "normal" | "product";
 }
 
-const Carousel: React.FC<CarouselProps> = ({ cards }) => {
+const Carousel: React.FC<CarouselProps> = ({ 
+  cards,
+  type = 'normal',
+ }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const visibleCards = 3;
+  const visibleCards = 5;
 
-  const getVisibleIndices = (centerIndex: number, totalCards: number) => {
+  const getVisibleIndices = (centerIndex: number, totalCards: number, visibleCards: number) => {
     const indices: number[] = [];
+    const range = Math.floor(visibleCards / 2);
 
-    for (let i = -1; i <= 1; i++) {
+    for (let i = -range; i <= range; i++) {
       indices.push((centerIndex + i + totalCards) % totalCards);
     }
 
     return indices;
   };
 
-  const visibleIndices = getVisibleIndices(currentIndex, cards.length);
+  const visibleIndices = getVisibleIndices(currentIndex, cards.length, visibleCards);
 
   const nextCard = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
@@ -45,7 +51,8 @@ const Carousel: React.FC<CarouselProps> = ({ cards }) => {
     <div className="relative w-full overflow-hidden p-5">
 
       {/* Cards */}
-      <div className="relative flex justify-center items-center w-full h-[300px]">
+      {type === "normal" && (
+        <div className="relative flex justify-center items-center w-full h-[300px]">
         {cards.map((card, index) => (
           <div
             key={index}
@@ -55,13 +62,15 @@ const Carousel: React.FC<CarouselProps> = ({ cards }) => {
                 : "opacity-0 scale-75"
             }`}
             style={{
-              transform: `translateX(${
-                (index - currentIndex) * 700
-              }px) scale(${visibleIndices.includes(index) ? 1 : 0.75})`,
+              transform: `translateX(${(index - currentIndex) * (700 / visibleCards)}%) scale(${
+                visibleIndices.includes(index) ? 0.92 : 0.75
+              })`,
               transition: "transform 0.5s ease",
             }}
           >
-            <Card
+
+            {/* Componente Normal */}
+              <Card
               onClick={() => alert("Card clicado")}
               image={card.image}
               description={card.description}
@@ -72,6 +81,34 @@ const Carousel: React.FC<CarouselProps> = ({ cards }) => {
           </div>
         ))}
       </div>
+      )}
+      
+      {type === "product" && (
+        <div className="relative flex justify-center items-center w-full h-[300px]">
+        {cards.map((card, index) => (
+          <div
+            key={index}
+            className={`absolute transition-transform duration-500 ${
+              visibleIndices.includes(index)
+                ? "opacity-100 scale-100"
+                : "opacity-0 scale-75"
+            }`}
+            style={{
+              transform: `translateX(${(index - currentIndex) * (550 / visibleCards)}%) scale(${
+                visibleIndices.includes(index) ? 0.92 : 0.75
+              })`,
+              transition: "transform 0.5s ease",
+            }}
+          >
+
+            {/* Componente Produto */}
+          <ItemCard 
+            image={card.image} price={21} descount={1} totalComents={2} totalStars={2}>{card.description}
+          </ItemCard>
+          </div>
+        ))}
+      </div>
+      )}
 
       {/* Botão Esquerda */}
       <button
