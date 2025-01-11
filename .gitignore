@@ -1,0 +1,11 @@
+.backend/
+.backend/env
+
+# Envs
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/

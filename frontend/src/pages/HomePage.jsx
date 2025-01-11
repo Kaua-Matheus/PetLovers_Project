@@ -1,5 +1,7 @@
 // Importações externas
 import React from "react";
+import api from "../services/api"
+import { useEffect, useState } from "react";
 
 // Importações de componentes do site
 import blackcat from "../assets/blackcat.png";
@@ -19,6 +21,19 @@ import Service from "../components/Service";
 
 function HomePage() {
 
+  const [users, setUsers] = useState([])
+
+  async function getUsers(){
+      const usersFromApi = await api.get('/usuarios');
+
+      setUsers(usersFromApi.data);
+      console.log(users)
+  }
+
+  useEffect(() => {
+    getUsers()
+  }, []);
+
   return (
     
     <body>
@@ -35,6 +50,17 @@ function HomePage() {
           <Button type='secundary_button' onClick={() => alert("Botão Clicado!")} >Retire e Troque</Button>
         </div>
 
+        <div>
+          { users.map( user => (
+            <div key={user.id}>
+              <div>
+                <p>Nome: {user.name}</p>
+                <p>Idade: {user.age}</p>
+                <p>Email: {user.email}</p>
+              </div>
+            </div>
+          ))}
+        </div>
 
         {/* Carrossel */}
         <div>
