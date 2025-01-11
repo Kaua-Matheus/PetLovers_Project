@@ -10,6 +10,7 @@ import furao from "../assets/furao.jpg";
 
 // Componentes
 import Button from "../components/Button";
+import Menu from "../components/Menu"
 import Card from "../components/Card";
 import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
@@ -37,8 +38,8 @@ function HomePage() {
   return (
     
     <body>
-
-      <Navbar />
+        <Navbar />
+      
       
       <main className='mx-32 p-5 mt-10'>
       
