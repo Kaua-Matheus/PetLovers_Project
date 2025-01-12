@@ -25,7 +25,7 @@ const Menu: React.FC = () => {
             {/* Botão Hamburger */}
             <button
                 onClick={() => setOpened(!Opened)}
-                className="ml-12 h-8 btn btn-sm border-none rounded shadow-sm text-gray-800 bg-white hover:text-white hover:bg-gray-800 px-4
+                className="h-8 btn btn-sm border-none rounded shadow-sm text-gray-800 bg-white hover:text-white hover:bg-gray-800 px-4
                     active:translate-y-0.5 active:shadow-none"
             >
                 <GiHamburgerMenu />

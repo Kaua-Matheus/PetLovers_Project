@@ -1,17 +1,30 @@
+// React
 import React from 'react'
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import api from "../services/api"
+
+// Componentes
 import Button from "./Button"
 import Menu from "./Menu"
 import Search from "./Search"
+import User from './User'
+
+
 import { FaHome } from "react-icons/fa";
 
-import { Link } from 'react-router-dom';
-
 const Navbar = () => {
+
+  
+
   return (
       
-    <div class='fixed top-0 w-full z-50 flex space-x-4 md:space-x-32 lg:space-x-96 px-24 h-12 bg-gray-100 shadow-md justify-center items-center'>
+    <div class='
+      fixed top-0 w-full z-50 flex space-x-4 
+      md:space-x-32 lg:space-x-96 px-24 h-12 
+      bg-gray-100 shadow-md justify-center items-center'>
         
-      <div class="flex space-x-2">
+      <div class="flex space-x-2 ml-4 mr-4">
 
           <Link to='/'>
             <button  className="
@@ -21,7 +34,6 @@ const Navbar = () => {
               <FaHome/>
             </button>
           </Link >
-
 
           <Link to='/contato'>
             <Button>Contato</Button>
@@ -44,13 +56,15 @@ const Navbar = () => {
           </Link >
 
       </div>
-
-      <div className='flex'>
         
-        <Search/>
-        <Menu/>
-      </div>
-          
+      <div className='flex spac-x-2'>
+        
+          <Search/>
+          <User/>
+          <Menu/>
+        
+      </div>  
+
     </div>
 
 

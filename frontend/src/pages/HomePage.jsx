@@ -1,4 +1,4 @@
-// Importações externas
+// React
 import React from "react";
 import api from "../services/api"
 import { useEffect, useState } from "react";
@@ -10,7 +10,6 @@ import furao from "../assets/furao.jpg";
 
 // Componentes
 import Button from "../components/Button";
-import Menu from "../components/Menu"
 import Card from "../components/Card";
 import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
@@ -51,7 +50,7 @@ function HomePage() {
           <Button type='secundary_button' onClick={() => alert("Botão Clicado!")} >Retire e Troque</Button>
         </div>
 
-        <div>
+        {/* <div>
           { users.map( user => (
             <div key={user.id}>
               <div>
@@ -61,7 +60,7 @@ function HomePage() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Carrossel */}
         <div>
