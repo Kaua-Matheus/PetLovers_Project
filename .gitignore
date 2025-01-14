@@ -1,5 +1,4 @@
-.backend/
-.backend/env
+backend/
 
 # Envs
 .env
@@ -9,3 +8,14 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+node_modules
+
+*.prisma
+
+.package-lock.json
+.package.json
+
+server.js
+**/schema.prisma
+migrations/
