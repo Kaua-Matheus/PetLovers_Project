@@ -8,11 +8,17 @@ interface FullscreenImageProps {
   css?: string;
 }
 
-// Arrumar para que a tela trave quando as imagens estiverem em fullscreen
-// Arrumar o fundo para que não fiquem espaços em branco
-
 const FullscreenImage: React.FC<FullscreenImageProps> = ({ src, alt, css }) => {
     const [isFullscreen, setFullscreen] = useState(false);
+
+    useEffect(() => {
+        if(isFullscreen) {
+            document.body.style.overflow = "hidden";
+        }
+        else {
+            document.body.style.overflow = '';
+        }
+    })
 
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {

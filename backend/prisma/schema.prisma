@@ -20,3 +20,16 @@ model User {
   password  String
   createdAt DateTime  @default(now())
 }
+
+model Product {
+  id            String    @id @default(uuid())
+  name          String
+  description   String
+  price         Float
+  stars         String
+  comments      String
+  image_name    String
+  image_path    String
+  image_type    String
+  createdAt     DateTime  @default(now())
+}

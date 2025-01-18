@@ -1,6 +1,7 @@
 import React , { useState, useEffect, useRef } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
+import api from "../services/api"
 
 
 import Button from "./Button";
@@ -13,6 +14,7 @@ const User: React.FC = () => {
     const inputEmail = useRef<HTMLInputElement>(null);
     const inputPassword = useRef<HTMLInputElement>(null);
 
+
     useEffect(() => {
         if (Opened) {
             document.body.style.overflow = 'hidden';
@@ -23,10 +25,18 @@ const User: React.FC = () => {
         
     }, [Opened]);
 
+
     async function createUsers() {
-        console.log(inputName);
+        await api.post('/usuarios', {
+            name: inputName.current?.value,
+            email: inputEmail.current?.value,
+            password: inputPassword.current?.value
+        })
     }
-    
+
+    async function deleteUsers(id) {
+        await api.delete(`/usuarios/:${id}`)
+    }
 
     return (
         <div>
