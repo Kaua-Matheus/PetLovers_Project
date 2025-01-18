@@ -9,92 +9,16 @@ import FullscreenImage from "../components/FullscreenImage";
 import dog from '../assets/animals/dog1.webp';
 
 const animals = '../assets/animals';
+//     id: String;
+//     name: String;
+//     description: String;
+//     price: Number;
+//     stars: Number;
+//     comments: Number;
+//     imagePath: String;
+// };
 
 export default function ContactPage() {
-
-    // Array aleatório de animais
-    const arrayAnimals = [
-        {
-            id: 1,
-            name: 'Doguinho',
-            img: `${animals}/dog1.jpg`,},
-        {
-            id: 2,
-            name: 'Gatinho',
-            img: `${animals}/cat1.jpg`,},
-        {
-            id: 3,
-            name: 'Doguinho',
-            img: `${animals}/dog2.jpg`,},
-        {
-            id: 4,
-            name: 'Gatinho',
-            img: `${animals}/cat2.jpg`,},
-        {
-            id: 5,
-            name: 'Doguinho',
-            img: `${animals}/dog3.jpg`,},
-        {
-            id: 6,
-            name: 'Gatinho',
-            img: `${animals}/cat3.jpg`,},
-        {
-            id: 7,
-            name: 'Doguinho',
-            img: `${animals}/dog4.jpg`,},
-        {
-            id: 8,
-            name: 'Gatinho',
-            img: `${animals}/cat4.jpg`,},
-        {
-            id: 9,
-            name: 'Doguinho',
-            img: `${animals}/dog5.jpg`,},
-        {
-            id: 10,
-            name: 'Gatinho',
-            img: `${animals}/cat5.jpg`,},
-        {
-            id: 11,
-            name: 'Doguinho',
-            img: `${animals}/dog6.jpg`,},
-        {
-            id: 12,
-            name: 'Gatinho',
-            img: `${animals}/cat6.jpg`,},
-        {
-            id: 13,
-            name: 'Doguinho',
-            img: `${animals}/dog7.jpg`,},
-        {
-            id: 14,
-            name: 'Gatinho',
-            img: `${animals}/cat7.jpg`,},
-        {
-            id: 15,
-            name: 'Doguinho',
-            img: `${animals}/dog8.jpg`,},
-        {
-            id: 16,
-            name: 'Gatinho',
-            img: `${animals}/cat8.jpg`,},
-        {
-            id: 17,
-            name: 'Doguinho',
-            img: `${animals}/dog9.jpg`,},
-        {
-            id: 18,
-            name: 'Gatinho',
-            img: `${animals}/cat9.jpg`,},
-        {
-            id: 19,
-            name: 'Doguinho',
-            img: `${animals}/dog10.jpg`,},
-        {
-            id: 20,
-            name: 'Gatinho',
-        },
-    ]
 
     return (
         <body>

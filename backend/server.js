@@ -93,4 +93,13 @@ app.delete('/usuarios/:id', async (req, res) => {
         }
 })
 
+app.get("/produtos", async (req, res) => {
+    try {
+        const products = await prisma.product.findMany();
+        return res.status(200).json(products)
+    } catch (error) {
+        console.log(error)
+    }
+})
+
 app.listen(3000)
