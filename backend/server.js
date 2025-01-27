@@ -1,19 +1,30 @@
-import express from "express"
-import cors from 'cors'
-import { PrismaClient } from '@prisma/client'
+/// --- Importações --- ///
+import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
+import cors from 'cors';
+import { PrismaClient } from '@prisma/client';
 
-// Variável Prisma
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Variável Prisma //
 const prisma = new PrismaClient()
 
-// Variável Express
+// Variável Express //
 const app = express()
 
-// Introduzindo Json nos Posts
+// Introduzindo Json nos Posts //
 app.use(express.json())
 
-// usando cors
+// usando cors //
 app.use(cors())
 
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
+/// --- Rotas --- ///
+
+//// ---- Usuários ---- ////
 app.post('/usuarios', async (req, res) => {
     const { name, email, password } = req.body;
     try {
@@ -93,13 +104,38 @@ app.delete('/usuarios/:id', async (req, res) => {
         }
 })
 
+/// ---- Produtos ---- ///
+
 app.get("/produtos", async (req, res) => {
     try {
         const products = await prisma.product.findMany();
-        return res.status(200).json(products)
+
+        const productsWithImageUrl = products.map(product => ({
+            ...product,
+            photoUrl: `${req.protocol}://${req.get('host')}/uploads/${product.photo}`,
+        }));
+
+        return res.status(200).json(productsWithImageUrl);
     } catch (error) {
-        console.log(error)
+        console.log(error);
+        res.status(500).json({ error: "Erro ao buscar produtos. "});
     }
 })
+  
+app.post('/produtos', async (req, res) => {
+    const { name, description, price, stars, comments, photo } = req.body;
+      const product = await prisma.product.create({
+        data: {
+            name, 
+            description, 
+            price, 
+            stars, 
+            comments, 
+            photo,
+        },
+      });
+      res.status(201).json(product);
+    
+    });
 
-app.listen(3000)
+app.listen(3000, () => console.log("Servidor rodando na porta 3000"));
