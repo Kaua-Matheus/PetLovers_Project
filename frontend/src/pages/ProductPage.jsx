@@ -7,6 +7,7 @@ import api from "../services/api"
 import dog from '../assets/animals/dog1.webp'
 // import product from '../assets/products/shampoo_01.webp'
 import Carousel from "../components/Carousel"
+import newCarousel from "../components/newCarousel"
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -19,6 +20,16 @@ export default function ProductPage() {
         setProducts((await api.get("/produtos")).data);
         console.log(products);
     }
+
+  const productCards = products.map(product => ({
+    image: product.photoUrl,
+    description: product.name,
+    content: product.description,
+//    price: `R$ ${product.price.toFixed(2)}`,
+  }));
+
+  console.log(productCards);
+  console.log(productCards[1]);
 
   return (
     <body>
@@ -44,37 +55,19 @@ export default function ProductPage() {
 
       <div>
           <h1>Favoritos dos Cachorros</h1>
-          {/* <Carousel type='product' cards={
-              [
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-              ]
-            }></Carousel> */}
+          <Carousel cards={productCards}>
+          </Carousel>
       </div>
 
       <div>
           <h1>Favoritos dos Gatos</h1>
-          {/* <Carousel type='product' cards={
-              [
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-              ]
-            }></Carousel> */}
+          <Carousel cards={productCards}>
+          </Carousel>
       </div>
 
       <div className='bg-gray-900 justify-center text-center p-10 flex flex-col mt-12 rounded-lg'>
           <h1 className='text-yellow-500'>Produtos Exclusivos</h1>
-          {/* <Carousel type='product' cards={
+          <Carousel type='product' cards={
               [
                 {image: dog, description: "Dog",content: "Cachorro oro oro"},
                 {image: dog, description: "Dog",content: "Cachorro oro oro"},
@@ -84,7 +77,7 @@ export default function ProductPage() {
                 {image: dog, description: "Dog",content: "Cachorro oro oro"},
                 {image: dog, description: "Dog",content: "Cachorro oro oro"},
               ]
-            }></Carousel> */}
+            }></Carousel>
       </div>
 
       </main>
