@@ -4,10 +4,7 @@ import React from 'react'
 import { useEffect, useState } from "react";
 import api from "../services/api"
 
-import dog from '../assets/animals/dog1.webp'
-// import product from '../assets/products/shampoo_01.webp'
 import Carousel from "../components/Carousel"
-import newCarousel from "../components/newCarousel"
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -16,20 +13,19 @@ export default function ProductPage() {
 
   const [products, setProducts] = useState([]);
 
-    async function consultar(){
-        setProducts((await api.get("/produtos")).data);
-        console.log(products);
-    }
+  // Função UseEffect para consultar os produtos automaticamente quando a página é aberta
+  useEffect( async () => {
+    setProducts((await api.get("/produtos")).data);
+  }, []);
 
   const productCards = products.map(product => ({
     image: product.photoUrl,
     description: product.name,
     content: product.description,
-//    price: `R$ ${product.price.toFixed(2)}`,
+    price: product.price,
+    stars: product.stars,
+    comments: product.comments,
   }));
-
-  console.log(productCards);
-  console.log(productCards[1]);
 
   return (
     <body>
@@ -48,11 +44,6 @@ export default function ProductPage() {
           ))}
         </div>
 
-
-      <button onClick={consultar}>
-                Clique!
-      </button>
-
       <div>
           <h1>Favoritos dos Cachorros</h1>
           <Carousel cards={productCards}>
@@ -67,17 +58,8 @@ export default function ProductPage() {
 
       <div className='bg-gray-900 justify-center text-center p-10 flex flex-col mt-12 rounded-lg'>
           <h1 className='text-yellow-500'>Produtos Exclusivos</h1>
-          <Carousel type='product' cards={
-              [
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-                {image: dog, description: "Dog",content: "Cachorro oro oro"},
-              ]
-            }></Carousel>
+          <Carousel type='product' cards={productCards}>
+          </Carousel>
       </div>
 
       </main>

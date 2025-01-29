@@ -12,6 +12,9 @@ interface CarouselProps {
   image: string;
   description: string;
   content: string;
+  price?: number | undefined;
+  stars?: string;
+  comments?: string;
   }>;
   type?: "normal" | "product";
 }
@@ -50,7 +53,7 @@ const Carousel: React.FC<CarouselProps> = ({
   return (
     <div className="relative w-full overflow-hidden p-5">
 
-      {/* Cards */}
+      {/* Card Normal */}
       {type === "normal" && (
         <div className="relative flex justify-center items-center w-full h-[300px]">
         {cards.map((card, index) => (
@@ -83,6 +86,7 @@ const Carousel: React.FC<CarouselProps> = ({
       </div>
       )}
       
+      {/* Card Product */}
       {type === "product" && (
         <div className="relative flex justify-center items-center w-full h-[300px]">
         {cards.map((card, index) => (
@@ -103,7 +107,9 @@ const Carousel: React.FC<CarouselProps> = ({
 
             {/* Componente Produto */}
           <ItemCard 
-            image={card.image} price={21} descount={1} totalComents={2} totalStars={2}>{card.description}
+
+            // Arrumar!
+            image={card.image} price={Number(card.price)} descount={1} totalComents={Number(card.comments)} totalStars={Number(card.stars)}>{card.description}
           </ItemCard>
           </div>
         ))}

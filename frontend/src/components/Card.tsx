@@ -11,7 +11,7 @@ interface CardProps {
   type?: "primary_card" | "product_card";
   image?: string;
   description?: string;
-  price?: string;
+  price?: number;
   rating?: number;
 }
 
@@ -62,8 +62,9 @@ export default function Card({
             )}
           </div>
         )}
-        {/* Outros filhos (se fornecidos) */}
+
         {children}
+
       </div>
     </div>
   );
